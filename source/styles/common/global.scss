@@ -1,1 +1,22 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+body {
+    box-sizing: border-box;
+    font-family: --main-font;
+    font-size: 14px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

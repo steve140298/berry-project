@@ -16,3 +16,9 @@
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
+
+.visible-mobile {
+  @include tablet {
+    display: none !important;
+  }
+}

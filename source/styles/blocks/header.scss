@@ -1,5 +1,83 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: var(--sky-color);
+  color: var(--dark-color);
+  padding-block: 8px;
+  border-bottom: 1px solid rgba(88, 13, 101, 0.25);
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+  }
+
+  &__navigation {
+    position: absolute;
+    pointer-events: none;
+    inset: 0;
+    top: 70px;
+    height: 50vh;
+    padding: 32px 40px;
+    z-index: 1;
+    background-color: var(--sky-color);
+    opacity: 0;
+
+    font-size: 20px;
+    padding: 32px 40px;
+    transition: opacity 0.3s ease;
+
+    @include tablet {
+      position: static;
+      transform: none;
+      height: auto;
+      padding: 0;
+      display: block;
+      pointer-events: auto;
+    }
+
+    &--open {
+      display: block;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+
+      @include tablet {
+        flex-direction: row;
+        column-gap: 16px;
+    }
+    }
+
+  }
+  &__burger-button {
+    @include flex-center;
+
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    &::after {
+      content: "";
+      width: 45px;
+      height: 5px;
+      border-radius: 5px;
+      background-color: var(--accent-light-color);
+      box-shadow: 0 -12px var(--accent-light-color), 0 12px var(--accent-light-color);
+    }
+    &:hover::after {
+        transition-duration: var(--transition-duration);
+        background-color: var(--accent-light-hover-color);
+        box-shadow: 0 -12px var(--accent-light-hover-color), 0 12px var(--accent-light-hover-color);
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
 }

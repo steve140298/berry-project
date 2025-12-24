@@ -6,6 +6,12 @@ $mobile: 320px;
   font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
 }
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin tablet {
   @media (min-width: $tablet) {
     @content;

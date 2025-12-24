@@ -1,7 +1,9 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
 body {
     box-sizing: border-box;
-    font-family: --main-font;
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
     font-size: 14px;
     background-color: var(--light-color);
     color: var(--dark-color);
@@ -19,4 +21,24 @@ svg * {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

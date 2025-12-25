@@ -1,0 +1,87 @@
+.hero {
+    background-image: url(../../images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__inner {
+        padding-block-start: 90px;
+        padding-block-end: 190px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        font-family: var(--accent-font);
+        font-weight: 400;
+        font-size: 36px;
+        color: var(--accent-light-color);
+        line-height: 1;
+        min-width: 265px;
+        text-align: center;
+        margin-block-end: 32px;
+
+        @include tablet {
+            font-size: 48px;
+            margin-block-end: 48px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        row-gap: 16px;
+        // padding: 0 28px;
+        margin-block-end: 58px;
+
+        @include tablet {
+            font-size: 22ppx;
+        }
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+        
+
+        &::before {
+          content: '';
+          width: 32px;
+          aspect-ratio: 1;
+          flex-shrink: 0;
+        }
+
+        &:nth-child(1)::before {
+          background-image: url(../../icons/leaf-icon.svg);
+          background-repeat: no-repeat;
+        }
+
+        &:nth-child(2)::before {
+          background-image: url(../../icons/ice-icon.svg);
+          background-repeat: no-repeat;
+        }
+
+        &:nth-child(3)::before {
+          background-image: url(../../icons/ic_outline-delivery-dining.svg);
+          background-repeat: no-repeat;
+        }
+    }
+
+    &__button {
+        font-family: 'Raleway';
+        padding: 16px 5px;
+        font-size: 20px;
+        max-width: 336px;
+       width: 336px;
+
+    }
+}

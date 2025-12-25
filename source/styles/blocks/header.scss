@@ -22,7 +22,7 @@
     pointer-events: none;
     inset: 0;
     top: -100vh;
-    height: 50vh;
+    height: 46vh;
     padding: 32px 40px;
     background-color: var(--sky-color);
     opacity: 0;
@@ -52,11 +52,11 @@
       display: flex;
       flex-direction: column;
       row-gap: 32px;
-      
+
       @include tablet {
         flex-direction: row;
-        column-gap: clamp(56px, 7vw, 98px);
-        max-width: 612px;
+        column-gap: clamp(46px, 6.5vw, 98px);
+
     }
 
     }

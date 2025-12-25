@@ -8,6 +8,14 @@
   margin-block-end: 60px;
 }
 
+.title {
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 36px;
+  color: var(--accent-light-color);
+  line-height: 1;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;

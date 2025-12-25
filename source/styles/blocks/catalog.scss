@@ -1,0 +1,20 @@
+.catalog {
+
+  &__title {
+    text-align: center;
+    margin-block-end: 60px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 24px;
+  }
+
+  &__card {
+    row-gap: 28px;
+    border: 1px solid rgba(88, 13, 101, 0.25);
+    box-shadow: 0 2px 8px rgba(88, 13, 101, 0.25);
+  }
+}

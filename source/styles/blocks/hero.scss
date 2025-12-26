@@ -41,16 +41,6 @@
         min-width: 265px;
         text-align: center;
         margin-block-end: 35px;
-
-        @include tablet {
-            font-size: 48px;
-            margin-block-end: 48px;
-
-        }
-
-        @include desktop {
-          font-size: 52px;
-        }
     }
 
     &__list {

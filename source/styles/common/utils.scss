@@ -6,6 +6,10 @@
 
 .section {
   margin-block-end: 60px;
+
+  @include tablet {
+    margin-block-end: 100px;
+  }
 }
 
 .title {
@@ -14,6 +18,15 @@
   font-size: 36px;
   color: var(--accent-light-color);
   line-height: 1;
+
+  @include tablet {
+    font-size: 48px;
+    margin-block-end: 48px;
+  }
+
+  @include desktop {
+    font-size: 52px;
+  }
 }
 
 .visually-hidden {

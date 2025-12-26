@@ -6,15 +6,40 @@
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-
-    row-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 264px);
+    justify-content: center;
+    gap: 24px;
   }
 
   &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     row-gap: 28px;
     border: 1px solid rgba(88, 13, 101, 0.25);
     box-shadow: 0 2px 8px rgba(88, 13, 101, 0.25);
+    overflow: hidden;
+    padding-block-end: 54px;
+    border-radius: 40px;
+    color: var(--dark-color);
+
+
+
+    &-subtitle {
+      color: var(--accent-light-color);
+      font-family: 'Raleway';
+      font-size: 28px;
+      font-weight: 400;
+    }
   }
+
+  &__price-list {
+    display: flex;
+    column-gap: 12px;
+    font-size: 18px;
+    margin-block-end: 10px;
+  }
+
+  
 }

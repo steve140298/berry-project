@@ -1,0 +1,140 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 33px;
+
+  }
+  &::before {
+    content: '';
+    background-image: url(../../images/line-leaf.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 228px;
+    height: 42px;
+    display: block;
+    margin: auto;
+    margin-block-start: -6px;
+    margin-block-end: 69px;
+
+    @include tablet {
+      width: 296px;
+      margin-block-end: 57px;
+      padding-block-start: 36px;
+
+    }
+
+    @include desktop {
+      width: 296px;
+      grid-column: 1/3;
+    }
+  }
+
+ &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  @include desktop {
+    order: 2;
+  }
+ }
+
+  &__title {
+    margin-block-end: 70px;
+
+    @include tablet {
+      max-width: 528px;
+      margin-inline-start: -11px;
+      line-height: 1.1;
+      margin-block-end: 65px;
+    }
+    @include desktop {
+      max-width: 550px;
+    }
+
+  }
+
+
+
+  &__address {
+
+    margin-block-end: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    font-style: normal;
+
+    @include tablet {
+      margin-block-end: 40px;
+    }
+
+    &-text {
+    margin-block-end: 25px;
+    font-size: 16px;
+    text-align: center;
+    margin-block-start: 8px;
+    padding-inline: 10px;
+
+    @include tablet {
+      font-size: 20px;
+      margin-block: 8px 10px;
+      padding-inline-start: 0;
+    }
+    }
+
+    &-link {
+      display: flex;
+      column-gap: 4px;
+      align-items: center;
+
+      &:nth-child(2)::before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        background-image: url('../../icons/icon-leaf-address.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &:nth-child(3)::before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        background-image: url('../../icons/icon-call.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &:nth-child(4)::before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        background-image: url('../../icons/clarity_email-line.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 1.25;
+      }
+    }
+  }
+
+  &__map {
+    width: 100vw;
+
+    @include desktop {
+      width: 552px;
+      height: 372px;
+      order: 1;
+    }
+  }
+}

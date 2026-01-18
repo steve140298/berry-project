@@ -4,6 +4,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @include tablet {
+      background-image: url(../../images/background-tablet.png);
+
+    }
+
     &__inner {
         padding-block-start: 60px;
         padding-block-end: 190px;
@@ -13,13 +18,15 @@
 
         @include tablet {
           padding-block-start: 142px;
-          padding-block-end: 420px;
+          padding-block-end: 424px;
           align-items: flex-end;
+          padding-inline: 23px;
         }
 
         @include desktop {
           padding-block-start: 170px;
           padding-block-end: 252px;
+          align-items: center;
         }
     }
 
@@ -28,43 +35,67 @@
         flex-direction: column;
         align-items: center;
 
+
         @include tablet {
           align-items: flex-start;
+          width: 532px;
         }
 
         @include desktop {
-          padding-inline-end: 134px;
+          margin-inline-start: 185px;
+          width: 550px;
         }
     }
 
     &__title {
         min-width: 265px;
-        text-align: center;
-        margin-block-end: 35px;
+        margin-block-end: 32px;
+        line-height: 1.1;
+
+        @include tablet {
+          margin-block-end: 45px;
+        }
+
+        @include desktop {
+          margin-block-end: 52px;
+        }
+
+        &-break {
+          @include tablet {
+            display: none;
+          }
+
+        }
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         font-size: 16px;
-        row-gap: 16px;
-        margin-block-end: 58px;
+        row-gap: 14px;
+        margin-block-end: 63px;
 
         max-width: 208px;
 
         @include tablet {
             font-size: 18px;
-            line-height: 1.2;
+            row-gap: 21px;
             padding: 0;
             max-width: 502px;
+            margin-block-end: 48px;
+        }
+
+        @include desktop {
+          padding-inline-start: 23px;
+          margin-block-end: 52px;
         }
     }
 
     &__item {
         display: flex;
-        column-gap: 16px;
+        column-gap: 12px;
         align-items: center;
-
+        line-height: 1.17;
 
         &::before {
           content: '';
@@ -78,23 +109,38 @@
           background-repeat: no-repeat;
         }
 
-        &:nth-child(2)::before {
-          background-image: url(../../icons/ice-icon.svg);
+        &:nth-child(2) {
+          margin-block-end: 6px;
+
+          @include tablet {
+            margin-block-end: -1px;
+          }
+          &::before {
+            background-image: url(../../icons/ice-icon.svg);
           background-repeat: no-repeat;
+          }
         }
 
-        &:nth-child(3)::before {
-          background-image: url(../../icons/ic_outline-delivery-dining.svg);
+        &:nth-child(3) {
+          &::before {
+            background-image: url(../../icons/ic_outline-delivery-dining.svg);
           background-repeat: no-repeat;
+          }
         }
     }
 
     &__button {
-        font-family: 'Raleway';
-        padding: 16px 5px;
-        font-size: 20px;
-        max-width: 336px;
-        width: 100%;
+        max-width: 264px;
+        padding-block: 16px;
 
+        @include tablet {
+          max-width: 336px;
+          font-size: 28px;
+          padding: 17px 0;
+        }
+
+        @include desktop {
+          margin-inline-start: 37px;
+        }
     }
 }

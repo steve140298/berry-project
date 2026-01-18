@@ -1,0 +1,70 @@
+.footer {
+  background-color: rgba(241, 246, 252, 1);
+  padding-block: 9px 20px;
+
+  @include tablet {
+    padding-block: 25px 19px;
+  }
+
+  @include desktop {
+    padding-block: 24px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px 40px;
+
+    @include tablet {
+      padding-inline: 20px 26px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 20px;
+
+    @include tablet {
+      column-gap: 32px;
+    }
+  }
+
+  &__item {
+
+    max-height: 40px;
+  }
+
+  &__social-link svg {
+
+      @include tablet {
+        width: 40px;
+        height: 40px;
+      }
+
+  }
+
+  &__developer-logo {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    margin-left: auto;
+    font-size: 11px;
+
+    @include tablet {
+      margin-inline-start: -40px;
+      font-size: 16px;
+    }
+
+    & svg {
+      width: 20px;
+      height: 24px;
+
+      @include tablet {
+        width: 26px;
+        height: 32px;
+      }
+    }
+  }
+}

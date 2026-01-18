@@ -1,11 +1,16 @@
 .header {
   background-color: var(--sky-color);
   color: var(--dark-color);
-  padding-block: 8px;
+  padding-block: 4px;
   border-bottom: 1px solid rgba(88, 13, 101, 0.25);
   box-shadow: 0 2px 8px rgba(88, 13, 101, 0.25);
+
   @include tablet {
     padding-block: 22px;
+  }
+
+  @include desktop {
+    padding-block: 24px;
   }
 
   &__inner {
@@ -14,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-
+    padding-inline: 26px;
   }
 
   &__navigation {
@@ -39,7 +44,14 @@
       pointer-events: auto;
       opacity: 1;
       visibility: visible;
+      margin-block-start: 4px;
     }
+
+    @include desktop {
+      margin-inline-end: 37px;
+    }
+
+
 
     &--open {
       top: 70px;
@@ -55,12 +67,25 @@
 
       @include tablet {
         flex-direction: row;
-        column-gap: clamp(46px, 6.5vw, 98px);
+        column-gap: 16px;
+      }
+
+      @include desktop {
+        column-gap: 28px;
+      }
 
     }
+    &-item {
+
+      @include tablet {
+        width: 112px;
+      }
+
+      @include desktop {
+        width: 132px;
+      }
 
     }
-
 
   }
   &__burger-button {
@@ -70,13 +95,15 @@
     width: 60px;
     height: 60px;
     cursor: pointer;
+    margin-inline-end: -5px;
+
     &::after {
       content: "";
       width: 45px;
       height: 5px;
       border-radius: 5px;
       background-color: var(--accent-light-color);
-      box-shadow: 0 -12px var(--accent-light-color), 0 12px var(--accent-light-color);
+      box-shadow: 0 -13px var(--accent-light-color), 0 12px var(--accent-light-color);
     }
     &:hover::after {
         transition-duration: var(--transition-duration);
